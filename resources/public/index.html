@@ -1,0 +1,205 @@
+<DOCTYPE! html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+   <title>Test</title>
+ 
+<!-- JQuery -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- BOOTSTRAP -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- FONTAWESOME -->
+   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+   
+   <link rel="stylesheet" href="/css/style.css" type="text/css">
+   
+</head>
+<body>
+   <div id="app"></div>
+   <div class="container">
+      <nav class="navbar navbar-dark bg-dark mb-3">
+         <div class="container">
+            <div class="navbar-header">
+               <span class="navbar-brand">Heroes of the Aturi Cluster - Squadron Builder</span>
+            </div>
+         </div>
+      </nav>
+      <div class="row">
+         <div class="col-sm-12">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="input-group mb-3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Squadron Name</span>
+                     </div>
+                     <input class="form-control" placeholder="Your Name Here">
+                     <!--div class="input-group-append">
+                        <span class="input-group-text"><i class="far fa-edit"></i></span>
+                     </div-->
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-sm-6">
+                  <div class="input-group mb-1 mr-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Callsign</span>
+                     </div>
+                     <input class="form-control" placeholder="Blue Leader">
+                  </div>
+                  <div class="input-group mb-1 mr-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Ship</span>
+                     </div>
+                     <select class="form-control">
+                        <option>X-Wing</option>
+                        <option selected>Y-wing</option>
+                     </select>
+                     <div class="input-group-append">
+                        <span class="input-group-text">
+                           <input type="checkbox" class="mr-2">BTL-A4
+                        </span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6">
+                  <div class="input-group mb-1 mr-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">Pilot</span>
+                     </div>
+                     <input class="form-control" placeholder="Your Name Here">
+                  </div>
+                  <div class="form-inline mb-1">
+                     <div class="input-group mb-1">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text">XP</span>
+                        </div>
+                        <input class="form-control">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12" style="display: inline-block; float: none;">
+                  <div class="form-inline mb-1">
+                     <div class="form-control form-control-lg bg-secondary text-light mb-1 mr-1">
+                        <span class="xwing-font-b xwing-ps mr-1">2</span><span class="xwing-symbols xwing-ps mr-1">x</span>
+                        <span class="xwing-font-b xwing-attack mr-1">2</span><span class="xwing-symbols xwing-attack mr-1">%</span>
+                        <span class="xwing-font-b xwing-evade mr-1">1</span><span class="xwing-symbols xwing-evade mr-1">^</span>
+                        <span class="xwing-font-b xwing-hull mr-1">5</span><span class="xwing-symbols xwing-hull mr-1">&</span>
+                        <span class="xwing-font-b xwing-shield mr-1">3</span><span class="xwing-symbols xwing-shield mr-1">*</span>
+                     </div>
+                     <div class="form-control form-control-lg bg-secondary text-light mr-1 mb-1">
+                        <span class="xwing-symbols">t m A P P U</span>
+                     </div>
+                     <div class="form-control form-control-lg bg-secondary text-light mb-1 mr-1">
+                        <span class="xwing-symbols">f l</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text xwing-symbols">A</span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text xwing-symbols">U</span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text xwing-symbols">m</span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">4</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">6</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">8</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text xwing-symbols">P</span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text xwing-symbols">P</span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">3</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">5</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">7</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+                  <div class="input-group mb-1">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <span class="xwing-font-b xwing-ps-upgrade">9</span>
+                           <span class="xwing-symbols">m</span>
+                        </span>
+                     </div>
+                     <input class="form-control">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+   <script src="js/compiled/hotac.js"></script>
+</html>
