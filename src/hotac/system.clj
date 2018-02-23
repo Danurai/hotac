@@ -1,4 +1,5 @@
 (ns hotac.system
+   (:gen-class)
 	 (:require [org.httpkit.server :refer [run-server]]
 				 [com.stuartsierra.component :as component]
 				 [hotac.web :refer [app]]))
