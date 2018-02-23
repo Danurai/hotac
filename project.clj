@@ -8,8 +8,8 @@
   
   :main hotac.system
   
-  :jar-name     "xwingdata.jar"
-  :uberjar-name "xwingdata-standalone.jar"
+  :jar-name     "hotacsquad.jar"
+  :uberjar-name "hotacsquad-standalone.jar"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                 [org.clojure/clojurescript "1.9.946"]
@@ -55,7 +55,7 @@
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/hotac.js"
                            :main hotac.core
-                           :closure-defines {hotac.client/ws-uri "wss://hotacsquad.herokuapp.com/ws"}
+                           :closure-defines {hotac.core/ws-uri "wss://hotacsquad.herokuapp.com/ws"}
                            :optimizations :advanced
                            :pretty-print false}}]}
 
