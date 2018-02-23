@@ -3,10 +3,8 @@
            [clojure.java.io :as io]
            [compojure.core :refer [defroutes GET]]
            [compojure.route :refer [resources]]
-           [clojure.core.async :refer [>! <! go go-loop]]
-           [clojure.java.jdbc :as sql]))
+           [clojure.core.async :refer [>! <! go go-loop]]))
 
-(def db {:classname "org.sqlite.JDBC", :subprotocol "sqlite", :subname "test.db"})
 
 (defn- save-data [squad]
  ;;(prn (sql/query db "select 3*5 as result"))

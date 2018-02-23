@@ -4,14 +4,22 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  
-  
   :min-lein-version "2.7.1"
+  
+  :main hotac.system
+  
+  :jar-name     "xwingdata.jar"
+  :uberjar-name "xwingdata-standalone.jar"
 
-  :dependencies [[org.clojure/clojure "1.9.0-beta4"]
-                 [org.clojure/clojurescript "1.9.946"]
-                 [org.clojure/core.async  "0.3.443"]
-                 [reagent "0.8.0-alpha2"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                [org.clojure/clojurescript "1.9.946"]
+                [environ "1.1.0"]
+                [http-kit "2.2.0"]
+                [com.stuartsierra/component "0.3.2"]
+                [compojure "1.6.0"]
+                [reagent "0.7.0"]
+                [jarohen/chord "0.8.1"]
+                [org.clojure/core.async "0.3.465"]]
 
   :plugins [[lein-figwheel "0.5.14"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
@@ -21,7 +29,6 @@
   :cljsbuild {:builds
               [{:id "dev"
                 :source-paths ["src"]
-
                 ;; The presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
                 ;; into your build
@@ -48,6 +55,7 @@
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/hotac.js"
                            :main hotac.core
+                           :closure-defines {hotac.client/ws-uri "wss://hotacsquad.herokuapp.com/ws"}
                            :optimizations :advanced
                            :pretty-print false}}]}
 
@@ -94,9 +102,13 @@
   ;; Setting up nREPL for Figwheel and ClojureScript dev
   ;; Please see:
   ;; https://github.com/bhauman/lein-figwheel/wiki/Using-the-Figwheel-REPL-within-NRepl
-  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.4"]
+  :profiles {:uberjar {:aot :all
+                      :source-paths ["src"]
+                      :prep-tasks ["compile" ["cljsbuild" "once" "min"]]}
+            :dev {:dependencies [[binaryage/devtools "0.9.4"]
                                   [figwheel-sidecar "0.5.14"]
-                                  [com.cemerick/piggieback "0.2.2"]]
+                                  [com.cemerick/piggieback "0.2.2"]
+                                  [reloaded.repl "0.2.4"]]
                    ;; need to add dev source path here to get user.clj loaded
                    :source-paths ["src" "dev"]
                    ;; for CIDER
