@@ -1,4 +1,5 @@
 (ns hotac.system
+   (:gen-class)
 	 (:require [org.httpkit.server :refer [run-server]]
 				 [com.stuartsierra.component :as component]
 				 [hotac.web :refer [app]]))
@@ -15,7 +16,7 @@
 (defrecord HotAC []
   component/Lifecycle
   (start [this]
-    (assoc this :server (start-server #'app 9009)))
+    (assoc this :server (start-server #'app  (Integer/parseInt (get (System/getenv) "PORT" "9009")))))
   (stop [this]
     (stop-server (:server this))
     (dissoc this :server)))
