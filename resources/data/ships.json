@@ -1,0 +1,106 @@
+[{
+    "name": "X-Wing",
+    "attack": 3,
+    "evade": 2,
+    "hull": 3,
+    "shields": 2,
+    "actions": ["Focus", "Target Lock"],
+    "maneuvers": [
+      [0, 0, 0, 0, 0, 0],
+      [0, 2, 2, 2, 0, 0],
+      [1, 1, 2, 1, 1, 0],
+      [1, 1, 1, 1, 1, 0],
+      [0, 0, 1, 0, 0, 3]
+    ],
+    "slots": ["Astromech", "Torpedo"],
+    "symbol": "x",
+    "startxp": 5,
+    "ps": 2,
+    "cost": 5,
+    "recommended": ["A-Wing", "B-Wing", "T-70 X-Wing"],
+    "info": "The X-wing is a well-rounded campaign workhorse, and is great for cleaning up enemy fighters. For Pilots looking to switch to an A-wing or B-wing later, it tends to be the most efficient starting choice."
+  },
+  {
+    "name": "Y-Wing",
+    "attack": 2,
+    "evade": 1,
+    "hull": 3,
+    "shields": 2,
+    "actions": ["Focus", "Target Lock"],
+    "maneuvers": [
+      [0, 0, 0, 0, 0, 0],
+      [0, 1, 2, 1, 0, 0],
+      [1, 1, 2, 1, 1, 0],
+      [3, 1, 1, 1, 3, 0],
+      [0, 0, 3, 0, 0, 3]
+    ],
+    "slots": ["Astromech", "Torpedo", "Torpedo", "Turret"],
+    "special": {
+      "Title": "BTL-A4"
+    },
+    "symbol": "y",
+    "startxp": 8,
+    "ps": 2,
+    "cost": 5,
+    "recommended": ["HWK-290"],
+    "info": "Capable of carrying a turret and multiple types of ordnance, the Y-wing is flexible enough to take on any campaign mission. Bomb Loadout is factored into the scoresheet and not limited here, and BTL-A4 can give any turreted Y-wing extra punch."
+  },
+  {
+    "name": "A-Wing",
+    "attack": 2,
+    "evade": 3,
+    "hull": 2,
+    "shields": 2,
+    "actions": ["Focus", "Target Lock", "Boost", "Evade"],
+    "slots": ["Elite", "Missile"],
+    "special": [],
+    "symbol": "a",
+    "ps": 4,
+    "cost": 5,
+    "info": "Exceptionally fast and maneuverable, the A-wing makes a great campaign choice for hit and run missions. Every Pilot flying an A-wing is considered to be an A-Wing Test Pilot and receives as additional Elite upgrade slot."
+  },
+  {
+    "name": "B-Wing",
+    "attack": 3,
+    "evade": 1,
+    "hull": 3,
+    "shields": 5,
+    "actions": ["Barrel Roll", "Target Lock", "Focus"],
+    "slots": ["Elite", "System", "Cannon", "Torpedo", "Torpedo"],
+    "special": {
+      "Title": "B2"
+    },
+    "symbol": "b",
+    "ps": 4,
+    "cost": 5,
+    "info": "The B-wing packs unparalleled firepower, making it ideal for assault missions against large or stationary targets. B-wing/E2 is factored in, so it can optionally equip a crew instead of one modification. However slow speed and poor agility makes the B-wing an easy target for enemy fighters."
+  },
+  {
+    "name": "HWK-290",
+    "attack": 1,
+    "evade": 2,
+    "hull": 4,
+    "shields": 1,
+    "actions": ["Focus", "Target Lock"],
+    "slots": ["Turret", "Crew"],
+    "special": [],
+    "symbol": "h",
+    "ps": 4,
+    "cost": 5,
+    "info": "A solid choice for a dedicated support ship using the Moldy Crow title, the HWK-290 is the only Rebel ship that can equip a crew slot without giving up a modification slot, and gains an illicit upgrade slot as well."
+  },
+  {
+    "name": "T-70 X-Wing",
+    "attack": 3,
+    "evade": 2,
+    "hull": 3,
+    "shields": 3,
+    "actions": ["Focus", "Target Lock", "Boost"],
+    "slots": ["Torpedo", "Astromech", "Tech"],
+    "special": [],
+    "symbol": "w",
+    "ps": 5,
+    "cost": 5,
+    "info": "A natural upgrade from the T-65 X-wing for pilots with the skill to fly one. With upgraded engines and shields, the T-70 X-wing is more maneuverable and provides more options for upgrading over the older model."
+  }
+]
